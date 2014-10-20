@@ -1,0 +1,19 @@
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Mixins
+
+******************************************************************/
+
+/*********************
+HOVER EFFECTS
+*********************/
+
+@mixin hover-alpha {
+	opacity: 0.6;
+	-moz-opacity: 0.6;
+	-webkit-opacity: 0.6;
+	-khtml-opacity: 0.6; 	
+	filter: alpha(opacity=60);
+}

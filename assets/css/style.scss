@@ -1,0 +1,71 @@
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Main Stylesheet
+
+import files from partials and breakpoints.
+
+******************************************************************/
+
+
+/* ------------------------------
+IMPORTING PARTIALS
+------------------------------ */
+
+// import normalize
+@import "partials/normalize";
+
+// import typography
+@import "partials/typography";
+
+// import colors
+@import "partials/color";
+
+// import grid
+@import "partials/grid";
+
+// import mixins
+@import "partials/mixins";
+
+
+/* ------------------------------
+MEDIA QUERIES for width resolution.
+------------------------------ */
+
+/* BASE (MOBILE) SIZE */
+@import "breakpoints/base";
+
+/* LARGER MOBILE DEVICES */
+@media only screen and (min-width: 481px) {
+	@import "breakpoints/481";
+} // end of media query
+
+/* TABLET & SMALLER LAPTOPS */
+@media only screen and (min-width: 768px) {
+	@import "breakpoints/768";
+} // end of media query
+
+/* TABLET LANDSCAPE & DESKTOP */
+@media only screen and (min-width: 1030px) {
+	@import "breakpoints/1030";
+} // end of media query
+
+/* LARGE VIEWING SIZE */
+@media only screen and (min-width: 1240px) {
+	@import "breakpoints/1240";
+} // end of media query
+
+
+/* ------------------------------
+MEDIA QUERIES for RETINA (2x RESOLUTION DEVICES).
+------------------------------ */
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+       only screen and (min--moz-device-pixel-ratio: 1.5),
+       only screen and (min-device-pixel-ratio: 1.5) {
+
+	// styles in 2x.scss
+	@import "breakpoints/2x";
+
+} // end of media query

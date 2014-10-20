@@ -1,0 +1,63 @@
+/******************************************************************
+
+Site Name:
+Author:
+
+Stylesheet: Resolution between up to 480px for smartphone portrait & landscape mode.
+Also for default styles for every devices.
+******************************************************************/
+
+
+/* ------------------------------
+COMMON STYLES
+------------------------------ */
+
+body {
+	font-family: $sans-serif;
+	font-size: 100%;
+	line-height: 1.5;
+	-webkit-font-smoothing: antialiased;
+	color: $keycolor1;
+	background-color: $bgcolor1;
+	height: 100%;
+}
+
+a, a:visited {
+	color: $link-color;
+
+	/* on hover */
+	&:hover, &:focus {
+		color: $link-hover;
+	}
+
+	/* on click */
+	&:active {
+
+	}
+
+	/* mobile tap color */
+	&:link {
+		/*
+		this highlights links on iPhones/iPads.
+		so it basically works like the :hover selector
+		for mobile devices.
+		*/
+		-webkit-tap-highlight-color : rgba( 0, 0, 0, 0.3 );
+	}
+}
+
+a:focus img,
+a:active img,
+a:hover img {
+	@include hover-alpha;
+}
+
+
+/* ------------------------------
+LAYOUT
+------------------------------ */
+
+.wrap {
+	width: 96%;
+	margin: 0 auto;
+}
