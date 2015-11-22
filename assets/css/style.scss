@@ -33,27 +33,27 @@ IMPORTING PARTIALS
 MEDIA QUERIES for width resolution.
 ------------------------------ */
 
-/* BASE (MOBILE) SIZE */
+/* BASE (PC) SIZE */
 @import "breakpoints/base";
 
-/* LARGER MOBILE DEVICES */
-@media only screen and (min-width: 481px) {
-	@import "breakpoints/481";
+/* SMALL MOBILE DEVICES - 241px to 480px */
+@media only screen and (min-width: 241px) and (max-width: 480px) {
+	@import "breakpoints/241up";
 } // end of media query
 
-/* TABLET & SMALLER LAPTOPS */
-@media only screen and (min-width: 768px) {
-	@import "breakpoints/768";
+/* LARGER MOBILE DEVICES - 481px to 767px */
+@media only screen and (min-width: 481px) and (max-width: 767px) {
+	@import "breakpoints/481up";
 } // end of media query
 
-/* TABLET LANDSCAPE & DESKTOP */
-@media only screen and (min-width: 1030px) {
-	@import "breakpoints/1030";
+/* TABLET & SMALLER LAPTOPS - 768px to 1029px */
+@media only screen and (min-width: 768px) and (max-width: 1029px) {
+	@import "breakpoints/768up";
 } // end of media query
 
-/* LARGE VIEWING SIZE */
-@media only screen and (min-width: 1240px) {
-	@import "breakpoints/1240";
+/* TABLET LANDSCAPE & DESKTOP - 1030px to 1239px */
+@media only screen and (min-width: 1030px) and (max-width: 1239px) {
+	@import "breakpoints/1030up";
 } // end of media query
 
 
@@ -67,5 +67,16 @@ MEDIA QUERIES for RETINA (2x RESOLUTION DEVICES).
 
 	// styles in 2x.scss
 	@import "breakpoints/2x";
+
+
+/* ------------------------------
+MEDIA QUERIES for PRINT STYLESHEET
+------------------------------ */
+@media print {
+
+	// styles in print.scss
+	@import "partials/print";
+
+}
 
 } // end of media query
